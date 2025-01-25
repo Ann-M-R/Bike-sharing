@@ -1,5 +1,5 @@
 # Bike Share Prediction
-This project predicts bike rental usage based on weather and environmental conditions using machine learning. Various models, including Logistic Regression, Decision Tree, Random Forest, and XGBoost, were trained and evaluated. XGBoost was selected as the best model based on its performance. The final model is served through a Flask API and containerized using Docker for easy deployment. Additionally, the application is deployed on AWS Elastic Beanstalk for scalable and managed hosting.
+This project predicts bike rental usage using machine learning by analyzing a variety of factors such as weather conditions, temporal features (hour, day, month, year), and other attributes like holiday status and seasonality. Multiple models, including Linear Regression, Decision Tree, Random Forest, and XGBoost, were trained and evaluated to determine the most accurate predictor. XGBoost was selected as the best-performing model. The final model is served through a Flask API, containerized with Docker for seamless deployment, and hosted on AWS Elastic Beanstalk for scalable and managed deployment.
 
 ---
 
@@ -33,8 +33,8 @@ The dataset used for training the models is available [here](https://www.kaggle.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Ann-M-R/bike-sharing.git
-cd bike-sharing
+git clone https://github.com/Ann-M-R/Bike-sharing.git
+cd Bike-sharing
 ```
 
 ### 2. Install Dependencies
@@ -119,7 +119,6 @@ python predict-test.py
 ## Cloud Deployment Using Elastic Beanstalk
 
 ### Creating Environment  
-The process of creating the Elastic Beanstalk environment is shown below:  
 
 ![Creating Environment](screenshots/deploy.jpg)  
 
@@ -129,7 +128,6 @@ The deployed environment is visible in the AWS Elastic Beanstalk console:
 ![AWS Environments Console](screenshots/console.jpg)  
 
 ### Monitoring Tab of the Environment  
-The monitoring tab displays the environment health, response time, and request count:  
 
 ![Monitoring Tab](screenshots/metrics.jpg)  
 

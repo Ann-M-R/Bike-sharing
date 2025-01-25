@@ -1,7 +1,6 @@
 import requests
 
-host = 'share-serving-env.eba-rasgmvfr.ap-southeast-2.elasticbeanstalk.com'
-url = f'http://{host}/predict'
+url = 'http://localhost:9696/predict'
 
 data = {
     "t1": 3.5,
