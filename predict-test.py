@@ -1,14 +1,13 @@
 import requests
 
-# %% URL of the prediction endpoint
-url = 'http://localhost:9696/predict'
+host = 'share-serving-env.eba-rasgmvfr.ap-southeast-2.elasticbeanstalk.com'
+url = f'http://{host}/predict'
 
-# %% Define the data to be sent for prediction
 data = {
-    "t1": 10.5,
-    "t2": 12.5,
+    "t1": 3.5,
+    "t2": 9.5,
     "hum": 78.5,
-    "wind_speed": 24.0,
+    "wind_speed": 6.0,
     "weather": "cloudy",
     "is_holiday": "non-holiday",
     "is_weekend": "weekday",
@@ -20,9 +19,7 @@ data = {
     "weekday": "Sunday"
 }
 
-# %% 
 response = requests.post(url, json=data).json()
 
-# %% Print the response 
 print(response)
 
